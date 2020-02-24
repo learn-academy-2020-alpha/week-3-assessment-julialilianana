@@ -74,19 +74,17 @@ var numbersToAdd3 = []
 // Expected output: []
 
 const accumulatingSum = (array) => {
-        let newArray= []
-        
-        for (i=0; i<array.length; i++){
-            let i=0
-        let x = array[i]
-        let y = array[i+1]
-            added = x + y
+    let indexZero = array[0]
+    let newArray= [indexZero]
+    let i = 0
+    let x = array[i]    
+        for (i=0; i<array.length-1; i++){
+            let y = array[i+1]
+            let added = x + y
             newArray.push(added)
-            x=added
-            
-
+            x = added
         }
-        return newArray
+    return newArray
 }
 console.log(accumulatingSum(numbersToAdd1))
 console.log(accumulatingSum(numbersToAdd2))
